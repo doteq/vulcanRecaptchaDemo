@@ -1,0 +1,17 @@
+<html>
+<body>
+<div id="recaptcha"></div>
+<script src="https://www.google.com/recaptcha/api.js?onload=recaptchaCallback&render=explicit&hl=pl" async defer></script>
+<script type="text/javascript">
+      var recaptchaCallback = function () {
+        grecaptcha.render("recaptcha", {
+            sitekey: '6LdjPAMTAAAAAFAMfg2dqTbXt9RbqsPNm4e4f4Kh',
+            callback: function (e) {
+                document.write('Udalo sie! '+e);
+                Android.recaptchaCallback(e);
+            }
+        });
+      }
+    </script>
+</body>
+</html>
